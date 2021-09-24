@@ -1,31 +1,158 @@
 body {
+    height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
 header {
+    height: 50px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cf592e; /*temp*/
+}
+
+    .logo {
+        font-size: 12px;
+        font-weight: 900;
+        padding-left: 8px;
+    }
+
+    nav {
+        margin-left: auto;
+        padding-right: 5px;
+    }
+
+        .links {
+            display: flex;
+            gap: 8px;
+        }
+
+            .links li {
+                border: 5px solid white;
+                border-radius: 100%;
+                background-color: white;
+                padding: 4px;
+                font-size: 10px;
+            }
+        
+.activities,
+.info,
+.author {
+    min-height: fit-content;
+    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .banner {
+    min-height: 520px;
+    background-image: url(banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    border-bottom: 10px solid black;
     display: flex;
+    flex: 1;
     flex-direction: column;
-}
+    text-align: right;
+    padding-right: 8px;
+    }
 
 .activities {
+    background-color: burlywood;
+    border-bottom: 10px solid black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-}
+    align-items: center;
+    font-size: 24px;
+    }
+
+    .card-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+    }
+
+        .card {
+            text-align: center;
+        }
+
+            .card img {
+                border: 4px solid blue;
+                border-radius: 4px;
+                width: 100px;
+                height: 100px;
+            }
 
 .info {
+    border-bottom: 10px solid black;
+    background-image: url(ooftrees.jpg);
+    background-size: cover;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
+    gap: 32px;
+}
+    .info p {
+        text-shadow: inherit;
+        font-weight: 700;
+    }
+
+    .info button {
+        background-color: whitesmoke;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+.author {
+    background-color: burlywood;
+    border-bottom: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
-.shop {
-    display: flex;
-}
+    .author img {
+        width: 40%;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    .author-card {
+        width: 350px;
+        background-color: white;
+        border: 4px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 8px;
+    }
+
+        .author-card h5 {
+            text-align: right;
+            margin-right: 10px;
+        }
 
 footer {
+    background-color: #cf592e; /*temp*/
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Individual Tags*/
+
+ul {
+    list-style: none;
 }
