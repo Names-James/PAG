@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #cf592e; /*temp*/
+    background-color: #d45d31; /*temp*/
 }
 
     .logo {
@@ -30,10 +30,10 @@ header {
         }
 
             .links li {
-                border: 5px solid white;
+                border: 5px solid #d45d31;
                 border-radius: 100%;
-                background-color: white;
-                padding: 4px;
+                background-color: #d45d31;
+                padding: 14px;
                 font-size: 10px;
             }
         
@@ -42,8 +42,8 @@ header {
 .author {
     min-height: fit-content;
     flex: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .banner {
@@ -60,7 +60,7 @@ header {
     }
 
 .activities {
-    background-color: burlywood;
+    background-color: #dddddc;
     border-bottom: 10px solid black;
     display: flex;
     flex-direction: column;
@@ -73,17 +73,22 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 5px;
+        gap: 20px;
         font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        
     }
 
         .card {
             text-align: center;
+            text-shadow: 2px black;
         }
 
             .card img {
-                border: 4px solid blue;
-                border-radius: 4px;
+                border: 3px solid black;
+                border-radius: 25%;
+                box-shadow: 2px 2px black;
                 width: 100px;
                 height: 100px;
             }
@@ -99,22 +104,23 @@ header {
     text-align: center;
     color: whitesmoke;
     text-shadow: 2px 2px black;
-    gap: 32px;
 }
     .info p {
         text-shadow: inherit;
-        font-weight: 700;
+        font-weight: bold;
     }
 
     .info button {
-        background-color: whitesmoke;
+        background-color: white;
         width: 200px;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 6px;
+        margin: 10px;
+        font-weight: bold;
     }
 
 .author {
-    background-color: burlywood;
+    background-color: #dddddc;
     border-bottom: 10px solid black;
     display: flex;
     justify-content: center;
@@ -131,7 +137,7 @@ header {
     .author-card {
         width: 350px;
         background-color: white;
-        border: 4px solid black;
+        border: 3px solid black;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -151,8 +157,18 @@ footer {
     align-items: center;
 }
 
+    .footer-links {
+        margin-right: auto;
+    }
+
 /*Individual Tags*/
 
 ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
