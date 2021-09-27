@@ -1,33 +1,47 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
 body {
     height: 100vh;
-    margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Roboto", Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #E5E7EB;
 }
 
-h3 {
-    margin: 0;
-}
-
-h4 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-}
-
-ul {
-    list-style: none;
+h1 {
+    font-family: "Koh Santepheap", Georgia, 'Times New Roman', serif;
 }
 
 a {
     text-decoration: none;
-    font-weight: bold;
     color: black;
 }
 
+/*Multi-Page Section Display*/
+
+.banner,
+.activities,
+.info,
+.author,
+.form-section {
+    min-height: 500px;
+    border-bottom: 7px solid black;
+    display: flex;
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*Header Section*/
+
 header {
-    height: 50px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,63 +57,58 @@ header {
     nav {
         margin-left: auto;
         padding-right: 5px;
+        font-size: 10px;
     }
 
         .links {
             display: flex;
-            gap: 8px;
+            list-style: none;
         }
 
-            .links li {
-                border: 5px solid #d45d31;
-                border-radius: 100%;
-                background-color: #d45d31;
-                padding: 14px;
-                font-size: 10px;
+            .links a {
+                display: block;
+                font-weight: bold;
+                padding: 16px;
             }
-        
-.activities,
-.info,
-.author,
-.form-section {
-    min-height: fit-content;
-    flex: 1;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
-/*Index CSS*/
+            .links a:hover {
+                background-color: #ffbc02;
+                cursor: pointer;
+            }
+
+
+
+/*Index|Banner Section*/
 
 .banner {
-    min-height: 520px;
-    background-image: url(banner.jpg);
+    background-image: url(banner2.jpg);
     background-size: cover;
     background-repeat: no-repeat, repeat;
-    border-bottom: 10px solid black;
-    display: flex;
-    flex: 1;
     flex-direction: column;
     text-align: right;
     padding-right: 8px;
     }
 
+/*Index|Activities Section*/
+
 .activities {
-    background-color: #dddddc;
-    border-bottom: 10px solid black;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
     gap: 10px;
+    }
+
+    .activities h2 {
+        font-size: 32px;
+        padding: 16px;
     }
 
     .card-box {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        font-size: 16px;
+        gap: 30px;
+        font-size: 18px;
         font-weight: bold;
         padding: 10px;
         
@@ -114,58 +123,74 @@ header {
                 border: 3px solid black;
                 border-radius: 25%;
                 box-shadow: 2px 2px black;
-                width: 100px;
-                height: 100px;
+                width: 200px;
+                height: 200px;
             }
 
+/*Index|PAG Info Section*/
+        
 .info {
-    border-bottom: 10px solid black;
     background-image: url(ooftrees.jpg);
     background-size: cover;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: whitesmoke;
+    color: #E5E7EB;
     text-shadow: 2px 2px black;
     gap: 10px;
 }
-    .info p {
-        text-shadow: inherit;
-        font-weight: bold;
-    }
 
     .info button {
         background-color: white;
         width: 200px;
-        padding: 10px;
         border-radius: 6px;
         font-weight: bold;
+        padding: 10px;
     }
+
+    .info button:hover {
+        background-color: #2871f7;
+    }
+
+/*Index|Author Section*/
 
 .author {
-    background-color: #dddddc;
-    border-bottom: 10px solid black;
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    padding: 0;
 }
 
-    .author img {
-        width: 40%;
-        border: 2px solid black;
-        border-radius: 10px;
-    }
-
-    .author-card {
-        width: 350px;
+    .author-container {
+        width: 900px;
         background-color: white;
         border: 3px solid black;
         border-radius: 10px;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        margin: 30px;
+        flex-shrink: 0;
+    }
+
+    .author img {
+        width: 25%;
+        border: 2px solid black;
+        box-shadow: 2px 2px black;
+        border-radius: 10px;
+    }
+
+    .author-card { 
+        height: 200px;   
+        background-color: #E5E7EB;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 2px 2px black;
+        display: flex;
         flex-direction: column;
+        justify-content: space-between;
         text-align: justify;
         padding: 8px;
     }
@@ -175,30 +200,37 @@ header {
             margin-right: 10px;
         }
 
+/* Footer Section */
+    
 footer {
-    background-color: #cf592e; /*temp*/
+    background-color: #cf592e; 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 10px;
 }
 
+footer h5 {
+    margin-right: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
     .footer-links {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         margin-right: auto;
+        padding: 8px;
     }
 
-    footer h3 {
-       margin-right: auto;
-    }
-
-
-/*Contact CSS*/
+/*Contact Page*/
 
 .form-section {
-    display: flex;
+    background-color: black;
     justify-content: center;
     align-items: center;
 }
@@ -207,7 +239,7 @@ footer {
         background-color: white;
         display: flex;
         flex-direction: column;
-        border: 5px solid #dddddc;
+        border: 5px solid #E5E7EB;
         border-radius: 10px;
         padding: 10px;
         font-weight: bold;
@@ -275,5 +307,10 @@ footer {
         .contact-card button {
             background-color: #c8c8ee;
             padding: 10px;
+            margin-top: 8px;
             border-radius: 10px;
+        }
+
+        .contact-card button:hover {
+            background-color: cornflowerblue;
         }
